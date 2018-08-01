@@ -3,7 +3,7 @@ var fs = require('fs')
 
 fs.readFile(filename, 'utf8', function (err, data) {
     if (err) throw err;
-    // getInput = '<vxx<vxx^vxx<>>>>>>x';
+    // getInput = '^<x>vx^<x';
     getInput = data;
     let directions = {
         '^': "north",
@@ -31,8 +31,7 @@ fs.readFile(filename, 'utf8', function (err, data) {
 
     for (let i = 0; i < getInput.length; i++) {
         if (getInput[i] == 'x') {
-
-            if (positionDirect != '') {
+            if (positionDirect != '' && reachedPos.indexOf(positionDirect) == -1) {
                 PhotoShoot += 1;
                 reachedPos.push(positionDirect);
                 beforePos = positionDirect;
