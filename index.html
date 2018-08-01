@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    var inputFiles = new XMLHttpRequest();
+    inputFiles.open('GET', './droneInput.txt');
+    inputFiles.onreadystatechange = function() {
+  alert(inputFiles.responseText);
+}
+    debugger
+</script>
+
+</html>
