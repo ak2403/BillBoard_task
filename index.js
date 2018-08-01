@@ -60,7 +60,7 @@ fs.readFile(filename, 'utf8', function (err, data) {
     verticalDistance = kmsCovered['Tonorth']+Math.abs(kmsCovered['Tosouth']);
     horizontalDistance = kmsCovered['Toeast']+Math.abs(kmsCovered['Towest']);
     
-    console.log("Area which the drone covered is " + verticalDistance*horizontalDistance + " sq.kms");
+    console.log("Area covered by drone " + verticalDistance*horizontalDistance + " sq.kms");
     // console.log(Object.keys(repeatedShoot).length)
     console.log("Number of BiiBoard photographed : ", PhotoShoot);
 });
